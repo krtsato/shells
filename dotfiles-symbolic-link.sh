@@ -1,12 +1,13 @@
 #!/usr/local/bin/zsh
 
 # check additional array store
-echo "Have you done these tasks?"
-echo "・setup zsh, VSCode and Hyper"
-echo "・add new dotfiles' name to the array of this script"
-echo "・set new 'settings.json', 'keybindings.json', and 'extensions_list' of VSCode"
-echo "・quit Hyper and start this script from terminal.app"
-echo "(y/n)"
+echo "Have you done these tasks?
+・setup zsh, VSCode and Hyper
+・add new dotfiles' name to the array of this script
+・set new 'settings.json', 'keybindings.json', and 'extensions_list' of VSCode
+・quit Hyper and start this script from terminal.app
+(y/n)"
+
 if ! read -q ; then
   echo "\nabort process"
   return 0
