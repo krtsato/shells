@@ -4,7 +4,7 @@
 echo "Have you done these tasks?
 ・setup zsh, VSCode and Hyper
 ・add new dotfiles' name to the array of this script
-・set new 'settings.json', 'keybindings.json', and 'extensions_list' of VSCode
+・set new 'settings.json' and 'keybindings.json' of VSCode
 ・quit Hyper and start this script from terminal.app
 (y/n)"
 
@@ -13,6 +13,9 @@ if ! read -q ; then
   return 0
 fi
 echo "\n"
+
+# create Brewfile
+brew bundle dump --force
 
 # create vscode's extensions list
 VSCODE_EXTENSIONS_LIST_DIR=~/.vscode/.vscode_extensions_list
