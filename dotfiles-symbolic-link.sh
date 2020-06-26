@@ -12,7 +12,6 @@ if ! read -q ; then
   echo "\nabort process"
   return 0
 fi
-echo "\n"
 
 # create Brewfile
 brew bundle dump --force
