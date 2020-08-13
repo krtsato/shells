@@ -14,7 +14,7 @@ if ! read -q ; then
 fi
 
 # create Brewfile
-brew bundle dump --force
+brew bundle dump --force --file ~/Brewfile
 
 # create vscode's extensions list
 VSCODE_EXTENSIONS_LIST_DIR=~/.vscode/.vscode_extensions_list
@@ -24,6 +24,7 @@ code --list-extensions > $VSCODE_EXTENSIONS_LIST_DIR
 # note : if you will make a directory link, add "/" to the last of keyname.
 local -A dot_files_dirs=(
   [Brewfile]=~/Brewfile
+  [.gemrc]=~/.gemrc
   [.gitconfig]=~/.gitconfig
   [.hyper.js]=~/.hyper.js
   [.hyper_plugins/]=~/.hyper_plugins
