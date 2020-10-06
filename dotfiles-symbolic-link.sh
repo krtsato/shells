@@ -14,7 +14,7 @@ if ! read -q ; then
 fi
 
 # create Brewfile
-brew bundle dump --force --file ~/Brewfile
+brew bundle dump --force --file ~/my.brewfile
 
 # create vscode's extensions list
 VSCODE_EXTENSIONS_LIST_DIR=~/.vscode/.vscode_extensions_list
@@ -23,7 +23,7 @@ code --list-extensions > $VSCODE_EXTENSIONS_LIST_DIR
 # additional associcative array, [key]=value
 # note : if you will make a directory link, add "/" to the last of keyname.
 local -A dot_files_dirs=(
-  [Brewfile]=~/Brewfile
+  [brewfile]=~/my.brewfile
   [.gemrc]=~/.gemrc
   [.gitconfig]=~/.gitconfig
   [.hyper.js]=~/.hyper.js
@@ -37,7 +37,7 @@ local -A dot_files_dirs=(
 
 # move dotfiles and create symbolic links from array store
 for name origin_dir in ${(kv)dot_files_dirs}; do
-  mv -f $origin_dir ~/dotfiles/
-  ln -fnsv ~/dotfiles/$name $origin_dir
+  mv -f $origin_dir ~/myrepo/dotfiles/
+  ln -fnsv ~/myrepo/dotfiles/$name $origin_dir
   echo "\n"
 done
