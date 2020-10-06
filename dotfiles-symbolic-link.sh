@@ -23,7 +23,7 @@ code --list-extensions > $VSCODE_EXTENSIONS_LIST_DIR
 # additional associcative array, [key]=value
 # note : if you will make a directory link, add "/" to the last of keyname.
 local -A dot_files_dirs=(
-  [brewfile]=~/my.brewfile
+  [job.brewfile]=~/job.brewfile
   [.gemrc]=~/.gemrc
   [.gitconfig]=~/.gitconfig
   [.hyper.js]=~/.hyper.js
