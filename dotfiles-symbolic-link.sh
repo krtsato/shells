@@ -14,7 +14,7 @@ if ! read -q ; then
 fi
 
 # create Brewfile
-brew bundle dump --force --file ~/my.brewfile
+brew bundle dump --force --file ~/job.brewfile
 
 # create vscode's extensions list
 VSCODE_EXTENSIONS_LIST_DIR=~/.vscode/.vscode_extensions_list
