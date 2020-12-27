@@ -26,6 +26,7 @@ local -A dot_files_dirs=(
   [job.brewfile]=~/job.brewfile
   [.gemrc]=~/.gemrc
   [.gitconfig]=~/.gitconfig
+  [.gitignore_global]=~/.gitignore_global
   [.hyper.js]=~/.hyper.js
   [.hyper_plugins/]=~/.hyper_plugins
   [keybindings.json]=~/Library/Application\ Support/Code/User/keybindings.json
