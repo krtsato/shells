@@ -1,8 +1,5 @@
 #!/usr/local/bin/zsh
 
-# Delete git project completely
-# Details : https://bit.ly/2Ce5GR61
-
 filter_branch() {
   # delete 'hoge' completely from my git history.
   # e.g. hoge is a secret key.
