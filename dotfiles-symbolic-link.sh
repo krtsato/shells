@@ -1,11 +1,14 @@
+#!/opt/homebrew/bin/zsh
+
+# old shebang
 #!/usr/local/bin/zsh
 
 # check additional array store
 echo "Have you done these tasks?
-・setup zsh, VSCode and Hyper
-・add new dotfiles' name to the array of this script
-・set new 'settings.json' and 'keybindings.json' of VSCode
-・quit Hyper and start this script from terminal.app
+- setup zsh, VSCode and Hyper
+- add new dotfiles' name to the array of this script
+- set new 'settings.json' and 'keybindings.json' of VSCode
+- start this script from terminal.app
 (y/n)"
 
 if ! read -q ; then
@@ -24,13 +27,13 @@ code --list-extensions > $VSCODE_EXTENSIONS_LIST_DIR
 # note : if you will make a directory link, add "/" to the last of keyname.
 local -A dot_files_dirs=(
   [job.brewfile]=~/job.brewfile
-  [.gemrc]=~/.gemrc
   [.gitconfig]=~/.gitconfig
   [.gitconfig.awa]=~/.gitconfig.awa
   [.gitconfig.catools]=~/.gitconfig.catools
   [.gitignore.global]=~/.gitignore.global
-  [.hyper.js]=~/.hyper.js
-  [.hyper_plugins/]=~/.hyper_plugins
+  #[.fig/settings.json]=~/.fig/settings.json # FIXME: The same filename overwrites VSCode settings,json
+  [karabiner/]=~/.config/karabiner
+  [Alfred]=~/Library/Application\ Support/Alfred
   [keybindings.json]=~/Library/Application\ Support/Code/User/keybindings.json
   [settings.json]=~/Library/Application\ Support/Code/User/settings.json
   [.vscode_extensions_list]=$VSCODE_EXTENSIONS_LIST_DIR
@@ -38,9 +41,11 @@ local -A dot_files_dirs=(
   [.zshrc]=~/.zshrc
 )
 
+local dist_dir=~/engr/myrepo/dotfiles
+
 # move dotfiles and create symbolic links from array store
 for name origin_dir in ${(kv)dot_files_dirs}; do
-  mv -f $origin_dir ~/myrepo/dotfiles/
-  ln -fnsv ~/myrepo/dotfiles/$name $origin_dir
+  mv -f $origin_dir $dist_dir/
+  ln -fnsv $dist_dir/$name $origin_dir
   echo "\n"
 done
