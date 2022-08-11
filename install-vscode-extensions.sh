@@ -1,3 +1,6 @@
+#!/opt/homebrew/bin/zsh
+
+# old shebang
 #!/usr/local/bin/zsh
 
 # check VSCode install
