@@ -17,7 +17,8 @@ if ! read -q ; then
 fi
 
 # create Brewfile
-brew bundle dump --force --file ~/job.brewfile
+# brew bundle dump --force --file ~/job.brewfile
+brew bundle dump --force --file ~/gnc.brewfile
 
 # create vscode's extensions list
 VSCODE_EXTENSIONS_LIST_DIR=~/.vscode/.vscode_extensions_list
@@ -26,11 +27,13 @@ code --list-extensions > $VSCODE_EXTENSIONS_LIST_DIR
 # additional associcative array, [key]=value
 # note : if you will make a directory link, add "/" to the last of keyname.
 local -A dot_files_dirs=(
-  [job.brewfile]=~/job.brewfile
+  #[job.brewfile]=~/job.brewfile
+  [gnc.brewfile]=~/gnc.brewfile
   [.gitconfig]=~/.gitconfig
-  [.gitconfig.awa]=~/.gitconfig.awa
-  [.gitconfig.catools]=~/.gitconfig.catools
-  [.gitignore.global]=~/.gitignore.global
+  #[.gitconfig.awa]=~/.gitconfig.awa
+  #[.gitconfig.catools]=~/.gitconfig.catools
+  #[.gitignore.global]=~/.gitignore.global
+  [.gitconfig.gincoinc]=~/.gitconfig.gincoinc
   #[.fig/settings.json]=~/.fig/settings.json # FIXME: The same filename overwrites VSCode settings,json
   [karabiner/]=~/.config/karabiner
   [Alfred]=~/Library/Application\ Support/Alfred
