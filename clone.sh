@@ -3,7 +3,7 @@
 ORG=$1
 REPOS=( \
   foo \
-  bar \
+  bar
 )
 
 for i in "${!REPOS[@]}"
