@@ -14,25 +14,25 @@ if ! read -q ; then
 fi
 
 # create Brewfile
-# brew bundle dump --force --file ~/job.brewfile
+# brew bundle dump --force --file ~/awa.brewfile
 # brew bundle dump --force --file ~/gnc.brewfile
-brew bundle dump --force --file ~/red.brewfile
+# brew bundle dump --force --file ~/red.brewfile
 
 # create vscode's extensions list
 VSCODE_EXTENSIONS_LIST_DIR=~/.vscode/.vscode_extensions_list
-# code --list-extensions > $VSCODE_EXTENSIONS_LIST_DIR
+code --list-extensions > $VSCODE_EXTENSIONS_LIST_DIR
 
 # additional associcative array, [key]=value
 # Note: if you will make a directory link, add "/" to the last of keyname.
 local -A dot_files_dirs=(
-  #[awa.brewfile]=~/awa.brewfile
-  #[gnc.brewfile]=~/gnc.brewfile
-  [red.brewfile]=~/red.brewfile
+  # [awa.brewfile]=~/awa.brewfile
+  # [gnc.brewfile]=~/gnc.brewfile
+  # [red.brewfile]=~/red.brewfile
   [.gitconfig]=~/.gitconfig
-  #[.gitconfig.catools]=~/.gitconfig.catools
-  #[.gitconfig.awa]=~/.gitconfig.awa
-  #[.gitconfig.gnc]=~/.gitconfig.gnc
-  [.gitconfig.red]=~/.gitconfig.red
+  # [.gitconfig.catools]=~/.gitconfig.catools
+  # [.gitconfig.awa]=~/.gitconfig.awa
+  # [.gitconfig.gnc]=~/.gitconfig.gnc
+  # [.gitconfig.red]=~/.gitconfig.red
   [.gitignore.global]=~/.gitignore.global
   [.fig/settings.json]=~/.fig/settings.json
   [karabiner/]=~/.config/karabiner
