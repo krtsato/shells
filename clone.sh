@@ -3,16 +3,30 @@
 ORG=$1
 SSH_HOST="github.com"
 REPOS=( \
-  eheya-data-analytics-batch \
-  eheya-data-analytics-cost \
-  eheya-data-analytics-data-api \
-  eheya-data-analytics-data-bridge \
-  eheya-data-analytics-data-management \
-  eheya-data-analytics-secure-data \
-  eheya-data-analytics-tools \
-  eheya-data-monitoring \
-  red-frasco-ad-repo \
-  aws-infra-eheya
+  discovery-api \
+  s.awa.fm \
+  your-trends-2022 \
+  account-web \
+  liverpool-webplayer-v2 \
+  image-subscriber \
+  db-sync \
+  meta-sync \
+  playlist-subscriber \
+  liverpool-batch \
+  meta \
+  liverpool-oauth2 \
+  node-cross-site-session \
+  liverpool-notification \
+  liverpool-proto \
+  liverpool-js-proto \
+  liverpool-ios-proto \
+  liverpool-android-v2 \
+  liverpool-tag \
+  live-audio \
+  liverpool-audio-subscriber \
+  comment \
+  comment-subscriber \
+  logger-api
 )
 
 if [ "$ORG" = "red-frasco" ]; then
