@@ -14,9 +14,8 @@ if ! read -q ; then
 fi
 
 # create Brewfile
-# brew bundle dump --force --file ~/awa.brewfile
-# brew bundle dump --force --file ~/gnc.brewfile
-# brew bundle dump --force --file ~/red.brewfile
+# add a brewfile by job
+brew bundle dump --force --file ~/awa.brewfile
 
 # create vscode's extensions list
 VSCODE_EXTENSIONS_LIST_DIR=~/.vscode/.vscode_extensions_list
@@ -25,18 +24,11 @@ code --list-extensions > $VSCODE_EXTENSIONS_LIST_DIR
 # additional associcative array, [key]=value
 # Note: if you will make a directory link, add "/" to the last of keyname.
 local -A dot_files_dirs=(
-  # [awa.brewfile]=~/awa.brewfile
-  # [gnc.brewfile]=~/gnc.brewfile
-  [red.brewfile]=~/red.brewfile
+  [awa.brewfile]=~/awa.brewfile
   [.gitconfig]=~/.gitconfig
-  # [.gitconfig.catools]=~/.gitconfig.catools
-  [.gitconfig.awa]=~/.gitconfig.awa
-  [.gitconfig.gnc]=~/.gitconfig.gnc
-  [.gitconfig.red]=~/.gitconfig.red
+  [.gitconfig.awa]=~/.gitconfig.awa # add gitconfig by job
   [.gitignore.global]=~/.gitignore.global
-  [.fig/settings.json]=~/.fig/settings.json
   [karabiner/]=~/.config/
-  # [Alfred/]=~/Library/Application\ Support/Alfred
   [keybindings.json]=~/Library/Application\ Support/Code/User/keybindings.json
   [settings.json]=~/Library/Application\ Support/Code/User/settings.json
   [.vscode_extensions_list]=$VSCODE_EXTENSIONS_LIST_DIR
